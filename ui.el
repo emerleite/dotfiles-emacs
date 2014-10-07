@@ -8,9 +8,9 @@
 
 ;; remove clutter from the UI
 (tool-bar-mode -1)
-(tooltip-mode -1)
-(scroll-bar-mode -1)
-(set-fringe-style -1)
+;; (tooltip-mode -1)
+;; (scroll-bar-mode -1)
+;; (set-fringe-style -1)
 
 ;; blinking cursor
 (blink-cursor-mode t)

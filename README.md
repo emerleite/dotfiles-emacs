@@ -38,7 +38,7 @@ Specify the `IRCNICK` environment variable as follows:
 
 ````bash
 
-export IRCNICK=danielfm
+export IRCNICK=emerleite
 ````
 
 Read the [ERC manual](http://www.gnu.org/software/emacs/manual/html_mono/erc.html)
@@ -89,10 +89,11 @@ While building this configuration, I borrowed some ideas/code from others:
 
 * [Prelude](https://github.com/bbatsov/prelude)
 * [Peleteiro's dotfiles](https://github.com/peleteiro/dotfiles)
+* [Daniel Martins dotfiles](https://github.com/danielfm/dotfiles-emacs)
 
 
 ## License
 
-Copyright (C) Daniel Fernandes Martins
+Copyright (C) Emerson Macedo Leite
 
 Distributed under the New BSD License. See COPYING for further details.

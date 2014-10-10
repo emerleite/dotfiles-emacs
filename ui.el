@@ -23,7 +23,7 @@
   (set-default-font "Monaco"))
 
 ;; my custom theme of choice
-(load-theme 'tomorrow-night-bright t)
+;;(load-theme 'tomorrow-night-bright t)
 
 ;; available custom themes
 ;;
@@ -39,4 +39,4 @@
 ;; (load-theme 'tomorrow-night-eighties t)
 ;;
 ;; zenburn:
-;; (load-theme 'zenburn t)
+(load-theme 'zenburn t)

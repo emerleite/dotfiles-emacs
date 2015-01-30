@@ -17,3 +17,8 @@
                      :url "https://github.com/steckerhalter/discover-my-major"
                      :after (progn
                               (global-set-key (kbd "C-h C-m") 'discover-my-major))))
+
+(add-to-list 'el-get-sources
+             '(:name fiplr
+                     :after (progn
+                              (global-set-key (kbd "C-x f") 'fiplr-find-file))))

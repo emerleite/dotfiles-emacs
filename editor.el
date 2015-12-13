@@ -16,3 +16,6 @@
 ;; disable auto-save capabilities
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+
+;;magit
+(setq magit-push-always-verify nil)

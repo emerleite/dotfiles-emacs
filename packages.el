@@ -15,3 +15,6 @@
 
 ;; install all missing packages via el-get
 (el-get 'sync (mapcar 'el-get-source-name el-get-sources))
+
+;; enable company-mode in all buffers
+(add-hook 'after-init-hook 'global-company-mode)

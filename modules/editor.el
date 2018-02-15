@@ -1,3 +1,6 @@
+;; file modes
+(el-get-bundle s)
+
 (add-to-list 'el-get-sources
 	     '(:name multiple-cursors
                      :after (progn

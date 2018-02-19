@@ -1,6 +1,10 @@
 ;; file modes
 (el-get-bundle s)
 
+(el-get-bundle memoize)
+
+(el-get-bundle jdee)
+
 (add-to-list 'el-get-sources
 	     '(:name multiple-cursors
                      :after (progn

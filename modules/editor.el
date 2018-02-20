@@ -1,9 +1,14 @@
 ;; file modes
 (el-get-bundle s)
 
+(el-get-bundle flycheck)
+
 (el-get-bundle memoize)
 
 (el-get-bundle jdee)
+
+(when (string= system-type "darwin")
+  (setq dired-use-ls-dired nil))
 
 (add-to-list 'el-get-sources
 	     '(:name multiple-cursors

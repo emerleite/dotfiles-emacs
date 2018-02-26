@@ -7,6 +7,8 @@
 
 (el-get-bundle jdee)
 
+(el-get-bundle terraform-mode)
+
 (when (string= system-type "darwin")
   (setq dired-use-ls-dired nil))
 

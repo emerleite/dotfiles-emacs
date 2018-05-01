@@ -19,3 +19,21 @@
 
 ;;magit
 (setq magit-push-always-verify nil)
+
+;;helm
+(helm-projectile-on)
+
+(helm-flx-mode +1)
+
+(setq helm-flx-for-helm-find-files t ;; t by default
+      helm-flx-for-helm-locate t) ;; nil by default
+
+(setq helm-mode-fuzzy-match t
+      helm-completion-in-region-fuzzy-match t)
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x p f") 'helm-projectile-find-file)
+(global-set-key (kbd "C-x p d") 'helm-projectile-find-dir)
+(global-set-key (kbd "C-x p g") 'helm-projectile-grep)

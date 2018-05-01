@@ -9,6 +9,8 @@
 
 (el-get-bundle terraform-mode)
 
+(el-get-bundle ac-php)
+
 (when (string= system-type "darwin")
   (setq dired-use-ls-dired nil))
 

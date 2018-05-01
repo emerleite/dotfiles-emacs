@@ -11,6 +11,8 @@
 
 (el-get-bundle ac-php)
 
+(el-get-bundle groovy-emacs-mode)
+
 (when (string= system-type "darwin")
   (setq dired-use-ls-dired nil))
 

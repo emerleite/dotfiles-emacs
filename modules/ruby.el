@@ -5,10 +5,6 @@
 	     '(:name bundler))
 
 (add-to-list 'el-get-sources
-	     '(:name feature-mode))
-
-
-(add-to-list 'el-get-sources
 	     '(:name scss-mode
 		     :after (setq scss-compile-at-save nil)))
 

@@ -28,10 +28,3 @@
              '(:name makey
                      :type git
                      :url "https://github.com/mickeynp/makey"))
-
-(add-to-list 'el-get-sources
-             '(:name discover-my-major
-                     :type git
-                     :url "https://github.com/steckerhalter/discover-my-major"
-                     :after (progn
-                              (global-set-key (kbd "C-h C-m") 'discover-my-major))))

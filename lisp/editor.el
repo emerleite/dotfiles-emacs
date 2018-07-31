@@ -29,6 +29,8 @@
       helm-flx-for-helm-locate t) ;; nil by default
 
 (setq helm-mode-fuzzy-match t
+      helm-recentf-fuzzy-match t
+      helm-buffers-fuzzy-matching t
       helm-completion-in-region-fuzzy-match t)
 
 (global-set-key (kbd "M-x") 'helm-M-x)

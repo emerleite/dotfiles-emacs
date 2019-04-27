@@ -28,3 +28,14 @@
              '(:name makey
                      :type git
                      :url "https://github.com/mickeynp/makey"))
+
+
+(add-to-list 'el-get-sources
+             '(:name neotree
+                     :website "https://github.com/jaypei/emacs-neotree"
+                     :description "An Emacs tree plugin like NerdTree for Vim."
+                     :type github
+                     :branch "master"
+                     :pkgname "jaypei/emacs-neotree"
+                     :after (progn
+                              (global-set-key (kbd "C-x ,") 'neotree-toggle))))

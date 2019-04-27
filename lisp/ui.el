@@ -22,5 +22,8 @@
 (when (eq system-type 'darwin)
   (set-default-font "Monaco"))
 
+(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode))
+
 ;; my custom theme of choice
 (load-theme 'zenburn t)

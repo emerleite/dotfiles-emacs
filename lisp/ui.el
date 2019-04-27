@@ -25,5 +25,11 @@
 (when (version<= "26.0.50" emacs-version )
   (global-display-line-numbers-mode))
 
+(setq zenburn-override-colors-alist
+      '(("zenburn-bg-1"  . "#4D4D4D")
+        ("zenburn-bg-05" . "#1A1A1A")
+        ("zenburn-bg+3"  . "#F6F6F6")
+        ("zenburn-bg"    . "#000000")))
+
 ;; my custom theme of choice
 (load-theme 'zenburn t)

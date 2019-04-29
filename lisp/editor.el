@@ -39,3 +39,4 @@
 (global-set-key (kbd "C-x p f") 'helm-projectile-find-file)
 (global-set-key (kbd "C-x p d") 'helm-projectile-find-dir)
 (global-set-key (kbd "C-x p g") 'helm-projectile-grep)
+(global-set-key (kbd "C-x g g") 'helm-grep-do-git-grep)

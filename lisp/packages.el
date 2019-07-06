@@ -1,6 +1,9 @@
 ;; load el-get
 (add-to-list 'load-path (expand-file-name "el-get/el-get" emacs-root-dir))
 
+(require 'dired-x)
+(setq-default dired-omit-files-p t) ; Buffer-local variable
+
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously

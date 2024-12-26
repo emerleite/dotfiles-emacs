@@ -1,7 +1,9 @@
-auto-save-list
-el-get
-.*~
-tmp/*
-url/cookies
+*~
 elpa
-ido.last
+eshell
+projectile*
+transient
+tutorial
+projects
+.lsp-session*
+tree-sitter

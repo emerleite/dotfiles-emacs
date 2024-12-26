@@ -1,35 +1,31 @@
-;; don't show the startup help screen
-(setq inhibit-startup-screen t)
-
-;; mode line settings
-(column-number-mode t)
-(line-number-mode t)
-(size-indication-mode t)
-
-;; remove clutter from the UI
-(tool-bar-mode -1)
-;; (tooltip-mode -1)
-;; (scroll-bar-mode -1)
-;; (set-fringe-style -1)
-
-;; blinking cursor
-(blink-cursor-mode t)
-
-;; disable alarm bell beep
-(setq visible-bell t)
-
 ;; use Monaco font in Mac OS X
-(when (eq system-type 'darwin)
-  (set-default-font "Monaco"))
+;; (when (eq system-type 'darwin)
+;;   (set-default-font "Monaco"))
 
-(when (version<= "26.0.50" emacs-version )
-  (global-display-line-numbers-mode))
+;; Hide UI
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
-(setq zenburn-override-colors-alist
-      '(("zenburn-bg-1"  . "#4D4D4D")
-        ("zenburn-bg-05" . "#1A1A1A")
-        ("zenburn-bg+3"  . "#F6F6F6")
-        ("zenburn-bg"    . "#000000")))
+;; Display line numbers and Truncated Lines
+(global-display-line-numbers-mode 1)
+(global-visual-line-mode t)
 
-;; my custom theme of choice
-(load-theme 'zenburn t)
+
+;; Treesitter
+(setq treesit-language-source-alist
+   '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+     (cmake "https://github.com/uyha/tree-sitter-cmake")
+     (css "https://github.com/tree-sitter/tree-sitter-css")
+     (elisp "https://github.com/Wilfred/tree-sitter-elisp")
+     (go "https://github.com/tree-sitter/tree-sitter-go")
+     (html "https://github.com/tree-sitter/tree-sitter-html")
+     (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+     (json "https://github.com/tree-sitter/tree-sitter-json")
+     (make "https://github.com/alemuller/tree-sitter-make")
+     (markdown "https://github.com/ikatyang/tree-sitter-markdown")
+     (python "https://github.com/tree-sitter/tree-sitter-python")
+     (toml "https://github.com/tree-sitter/tree-sitter-toml")
+     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+     (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))

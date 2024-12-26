@@ -1,24 +1,51 @@
-;; load el-get
-(add-to-list 'load-path (expand-file-name "el-get/el-get" emacs-root-dir))
+(require 'package)
 
-(require 'dired-x)
-(setq-default dired-omit-files-p t) ; Buffer-local variable
+(setq package-archives '(("gnu"          . "https://elpa.gnu.org/packages/")
+                         ("melpa-stable" . "https://melpa.org/packages/")))
 
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (let (el-get-master-branch)
-      (goto-char (point-max))
-      (eval-print-last-sexp))))
+(package-initialize)
+;; (package-refresh-contents)
 
-;; load all .el files inside `modules-dir`
-(setq modules-dir (expand-file-name "modules" emacs-root-dir))
-(mapc 'load (directory-files modules-dir 't "^[^#].*el$"))
+;; Themes
+(use-package dracula-theme
+  :ensure t
+  :config (progn
+            (load-theme 'dracula t)))
 
-;; install all missing packages via el-get
-(el-get 'sync (mapcar 'el-get-source-name el-get-sources))
+;; Programming languages
+(use-package elixir-mode
+  :ensure t)
 
-;; enable company-mode in all buffers
-(add-hook 'after-init-hook 'global-company-mode)
+(use-package go-mode
+  :ensure t)
 
+(use-package typescript-mode
+  :ensure t)
+
+(use-package org-roam
+  :ensure t)
+
+;; LSP and extras
+
+(use-package lsp-mode
+  :ensure t
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  (add-to-list 'exec-path "~/dev/support/lsp/elixir-ls/release")
+  (add-to-list 'exec-path "~/go/bin")
+  :hook ((elixir-mode . lsp)
+	 (go-mode . lsp-deferred)
+	 (typescript-mode . lsp)
+	 (html-mode . lsp)
+	 (js-mode . lsp))
+  :commands lsp)
+
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
+
+(use-package company
+  :ensure t
+  :hook (after-init . global-company-mode))
+
+(setq package-install-upgrade-built-in t)

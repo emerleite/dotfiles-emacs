@@ -12,6 +12,12 @@
   :config (progn
             (load-theme 'dracula t)))
 
+;; Editor Config
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 ;; Programming languages
 (use-package elixir-mode
   :ensure t

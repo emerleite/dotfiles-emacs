@@ -50,7 +50,8 @@
 	 (go-mode . lsp-deferred)
 	 (typescript-mode . lsp)
 	 (html-mode . lsp)
-	 (js-mode . lsp))
+	 (js-mode . lsp)
+	 (python-mode . lsp))
   :commands lsp)
 
 (use-package lsp-ui

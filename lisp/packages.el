@@ -33,8 +33,13 @@
 (use-package org-roam
   :ensure t)
 
-;; LSP and extras
+(use-package dockerfile-mode
+  :ensure t)
 
+(use-package docker-compose-mode
+  :ensure t)
+
+;; LSP and extras
 (use-package lsp-mode
   :ensure t
   :init

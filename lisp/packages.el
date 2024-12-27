@@ -14,10 +14,12 @@
 
 ;; Programming languages
 (use-package elixir-mode
-  :ensure t)
+  :ensure t
+  :hook (before-save . elixir-format))
 
 (use-package go-mode
-  :ensure t)
+  :ensure t
+  :hook (before-save . gofmt-before-save))
 
 (use-package typescript-mode
   :ensure t)
@@ -48,6 +50,14 @@
   :ensure t
   :hook (after-init . global-company-mode))
 
+;;Nerd Icons
+(use-package nerd-icons :defer t)
+(use-package nerd-icons-dired
+  :ensure t
+  :init
+  (setq dired-sidebar-theme 'nerd-icons)
+  :commands (nerd-icons-dired-mode)
+  :hook (dired-mode . nerd-icons-dired-mode))
 
 ;; Dired sidebar
 (use-package dired-sidebar

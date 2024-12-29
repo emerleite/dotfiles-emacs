@@ -33,10 +33,17 @@
 (use-package org-roam
   :ensure t)
 
+(use-package org-bullets
+  :ensure t
+  :hook (org-mode . org-bullets-mode))
+
 (use-package dockerfile-mode
   :ensure t)
 
 (use-package docker-compose-mode
+  :ensure t)
+
+(use-package pyvenv
   :ensure t)
 
 ;; LSP and extras

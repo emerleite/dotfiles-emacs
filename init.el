@@ -21,7 +21,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(docker-compose-mode dockerfile-mode docker docker-mode editorconfig nerd-icons-dired dired-sidebar elixir-mode projectile typescript-mode elixir-mode company lsp-ui lsp-mode org-roam magit go-mode evil eglot dracula-theme)))
+   '(org-bullets docker-compose-mode dockerfile-mode docker docker-mode editorconfig nerd-icons-dired dired-sidebar elixir-mode projectile typescript-mode elixir-mode company lsp-ui lsp-mode org-roam magit go-mode evil eglot dracula-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
